@@ -1,23 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
 
 body {
     padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
-    font-family: 'Poppins', sans-serif;
+    padding-bottom: 0;
+    color: #0f0e0e;
+    font-family: "NTR", sans-serif;
     overflow-x: hidden;
 }
 
 nav {
-    font-family: sans-serif;
+    font-family: "NTR", sans-serif;
+    background-color: #0a0a0a;
+    padding: 1rem;
 }
+
+.navbar{
+    margin: 0.5rem;
+    background-color: whitesmoke;
+    border: 3px black solid;
+}
+.logo{
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: black;
+}
+.navitems{
+    font-weight: 800;
+    color: black;
+    display: block;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease; 
+}
+
+.navbar-nav .nav-item .navitems {
+    position: relative;
+    color: #000000; /* Set the text color */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.navbar-nav .nav-item .navitems::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the distance of the underline from the text */
+    width: 0; /* Start with no width */
+    height: 2px; /* Set the thickness of the underline */
+    background-color: #000000; /* Set the color of the underline */
+    transition: width 0.3s ease; /* Add transition for width change */
+}
+
+.navbar-nav .nav-item .navitems:hover::after {
+    width: 100%; /* Expand the underline to full width */
+}
+
+/* Optional: Adjust padding to create spacing between nav items */
+.navbar-nav .nav-item + .nav-item {
+    margin-left: 20px; /* Adjust as needed */
+}
+
+
+
 
 .navbar-brand {
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-family: "NTR", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
+
 .carousel {
+    position: relative; 
     margin-bottom: 0;
+    background-image: url("./img/CarousalBG.jpg");
+    background-position: center;
+    background-size: cover;
+    top: -3em;
+}
+.carousel-item::before {
+    content: ""; /* Create pseudo-element for overlay */
+    position: absolute; /* Position the overlay */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
 
 .carousel-caption {
@@ -25,18 +96,28 @@ nav {
     z-index: 10;
 }
 
+
+
 .carousel-item {
     height: 415px;
+   
 }
-
     .carousel-item > img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        height: 30rem;
-    }
+        width: 100%; /* Ensure the image takes up the full width of its container */
+        height: 100%; /* Ensure the image takes up the full height of its container */
+        object-fit: cover
+    }    
 
+.btnscar{
+    background-color: #499bb998;
+    border:none; 
+    color: white;
+}
+.btn:hover{
+    background-color: #ffffff;
+    border: 1px rgb(255, 255, 255) solid; 
+    color: #02111698;
+}
 .padding {
     padding-bottom: 2rem;
 }
@@ -110,9 +191,10 @@ nav {
     }
 
 footer {
-    background-color: #3f3f3f;
+    background-color: #0a0a0a;
     color: #d5d5d5;
     padding-top: 2rem;
+    margin-bottom: 0;
 }
 
 hr.light {

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+nav {
+    font-family: "NTR", sans-serif;
+    background-color: #0a0a0a;
+    padding: 1rem;
+}
+
+.logo{
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: black;
+}
+.navitems{
+    font-weight: 800;
+    color: black;
+    display: block;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease; 
+}
+
+.navbar-nav .nav-item .navitems {
+    position: relative;
+    color: #000000; /* Set the text color */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.navbar-nav .nav-item .navitems::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the distance of the underline from the text */
+    width: 0; /* Start with no width */
+    height: 2px; /* Set the thickness of the underline */
+    background-color: #000000; /* Set the color of the underline */
+    transition: width 0.3s ease; /* Add transition for width change */
+}
+
+.navbar-nav .nav-item .navitems:hover::after {
+    width: 100%; /* Expand the underline to full width */
+}
+
+/* Optional: Adjust padding to create spacing between nav items */
+.navbar-nav .nav-item + .nav-item {
+    margin-left: 20px; /* Adjust as needed */
+}
+
+
+
+.navbar{
+    margin: 0.5rem;
+    background-color: whitesmoke;
+    border: 3px black solid;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-family: "NTR", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
